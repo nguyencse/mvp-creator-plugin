@@ -1,0 +1,7 @@
+package $packageName;
+
+import $basePackageName.MvpView;
+
+public interface I$moduleNameView extends MvpView {
+
+}

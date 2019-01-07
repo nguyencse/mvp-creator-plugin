@@ -1,0 +1,7 @@
+package $packageName;
+
+import $basePackageName.BasePresenter;
+
+public class $moduleNamePresenter extends BasePresenter<I$moduleNameView> implements I$moduleNamePresenter {
+
+}

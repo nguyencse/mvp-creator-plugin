@@ -1,0 +1,28 @@
+package $packageName;
+
+import $basePackageName.BaseActivity;
+
+public class $moduleNameActivity extends BaseActivity<$moduleNamePresenter> implements I$moduleNameView {
+
+    @Override
+    protected int getLayout() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
+        mPresenter = new $moduleNamePresenter();
+        mPresenter.attachView(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        mPresenter.detachView();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed() {
+        doubleBackToExit();
+    }
+}

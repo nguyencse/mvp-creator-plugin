@@ -1,0 +1,19 @@
+package $basePackageName;
+
+public class BasePresenter<V extends MvpView> implements MvpPresenter<V> {
+    protected V mMvpView;
+
+    @Override
+    public void attachView(V mvpView) {
+        mMvpView = mvpView;
+    }
+
+    @Override
+    public void detachView() {
+        mMvpView = null;
+    }
+
+    protected boolean isViewAttached() {
+        return mMvpView != null;
+    }
+}

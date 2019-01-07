@@ -1,0 +1,9 @@
+package $basePackageName;
+
+import android.content.Context;
+
+public interface MvpView {
+    void showToast(String msg);
+
+    Context getContext();
+}

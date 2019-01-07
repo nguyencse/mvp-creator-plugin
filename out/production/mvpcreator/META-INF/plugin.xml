@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.nguyencse.mvpcreator</id>
+    <name>Mvp Creator</name>
+    <version>1.0.1</version>
+    <vendor email="nguyencse.ninhhoa@gmail.com" url="https://www.facebook.com/nguyencse">Nguyen Y Nguyen</vendor>
+
+    <description><![CDATA[
+      Create MVP design pattern for android using Java
+    ]]></description>
+
+    <change-notes><![CDATA[
+      The first build of Mvp Creator plugin
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="MvpCreator.TopMenu"
+               text="M_vp Creator"
+               description="MVP Pattern Creator">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="actions.create_base"
+                    class="actions.CreateBaseAction"
+                    text="Create base"
+                    description="Create base MVP pattern for Android using Java"/>
+            <action id="actions.create_module"
+                    class="actions.CreateModuleAction"
+                    text="Create module"
+                    description="Create module MVP pattern for Android using Java"/>
+        </group>
+    </actions>
+
+</idea-plugin>
